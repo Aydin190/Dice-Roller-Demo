@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="diceRoller.css">
+</head>
+<body>
+    
+    <h1>Dice Roller</h1> 
+    
+
+        <div class="game-info">
+            <h3>Game Rule</h3>
+            <p>First player to reach 50 points wins!</p>
+        </div>
+
+
+        <div class="dice-container">
+
+            <div id="dice1" class="dice">🎲</div>
+
+            <div id="dice2" class="dice">🎲</div>
+
+        </div>
+
+
+
+        <div class="buttons">
+            <button id="rollBtn" onclick="rollDice()">Roll Dice 🎲</button>
+            <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+        </div>
+
+
+
+        <div class="result" id="result">
+            Player 1's turn
+        </div>
+
+
+        <div id="winning-message" class="winning-message"></div>
+
+        <div class="scores">
+            <div class="player active" id="player1Panel">
+                <div>Player 1 Score</div>
+                <div id="player1" class="playerScore">0</div>
+            </div>
+
+
+            <div class="player" id="player2Panel">
+                <div>Player 2 Score</div>
+                <div id="player2" class="playerScore">0</div>
+            </div>
+        
+        </div>
+
+
+
+
+
+        
+        <!-- <div class="rules">
+            <h3>How to play</h3>
+
+            <ul>
+                <li>Click "roll dice" to roll your dice and add to your current score.</li>
+                <li>Click "hold" to add to your total and make it the opponent's turn.</li>
+                <li>If you roll a "1", you lose your current score and your turn ends.</li>
+                <li>First player to reach 50 points wins.</li>
+            </ul>
+
+        </div> -->
+
+
+
+        <div class="history">
+            <div class="playerHistory" id="player1History">
+                <h3>Player 1 History</h3>
+                <ul id="history1"></ul>
+            </div>
+
+
+            <div class="playerHistory" id="player2History">
+                <h3>Player 2 History</h3>
+                <ul id="history2"></ul>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <audio id="diceSound" src="https://assets.mixkit.co/sfx/preview/mixkit-dice-rolling-1998.mp3" preload="auto"></audio>
+  <audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3" preload="auto"></audio>
+  <!-- <audio id="loseSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-explosion-2759.mp3" preload="auto"></audio> -->
+    
+
+
+  
+
+
+
+
+    <script src="diceRoller.js"></script>
+
+</body>
+</html>
