@@ -56,7 +56,7 @@ function rollDice() {
 
 
         dice1.classList.remove("animate");
-        dice2.classlist.remove("animate");
+        dice2.classList.remove("animate");
         const total = roll1 + roll2 + 2;
 
         result.textContent = `player${currentPlayer} rolled a ${total}`;
@@ -69,8 +69,8 @@ function rollDice() {
             document.getElementById("player1").textContent = player1Score;
             currentPlayer = 2;
         } else {
-            player2score += total;
-            document.getElementById("player2").textContent = player2score;
+            player2Score += total;
+            document.getElementById("player2").textContent = player2Score;
             currentPlayer = 1;
             // Winning conditions
             const totalScore = 50;
@@ -80,7 +80,7 @@ function rollDice() {
                 winSound.currentTime = 0;
                 winSound.play();
             } else if(player2Score >= totalScore) {
-                result.textContent = `Player 2 wins with ${player2score} points`;
+                result.textContent = `Player 2 wins with ${player2Score} points`;
                 roll.disabled = true;
                 winSound.currentTime = 0;
                 winSound.play();
@@ -106,8 +106,8 @@ function resetGame() {
     document.getElementById("dice1").textContent = "🎲";
     document.getElementById("dice2").textContent = "🎲";
     document.getElementById("result").textContent = "";
-    document.getElementById("roll").textContent = "Player 1 Roll"
-    document.getElementById("roll").disabled = false;
+    document.getElementById("rollBtn").textContent = "Player 1 Roll"
+    document.getElementById("rollBtn").disabled = false;
     player1Score = 0;
     player2Score = 0;
     currentPlayer = 1;
@@ -117,4 +117,4 @@ function resetGame() {
 
 
 // Initiate the button text
-   document.getElementById("roll").textContent = "Player 1 Roll";
+   document.getElementById("rollBtn").textContent = "Player 1 Roll";

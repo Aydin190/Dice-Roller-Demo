@@ -68,6 +68,13 @@ h1{
 
 
 
+
+.dice.animate{
+    animation: roll 1s ease-out;
+}
+
+
+
 @keyframes roll{
     0%{transform: translateY(0) rotate(0deg);}
     25%{transform: translateY(-100px) rotate(180deg);}
@@ -77,10 +84,186 @@ h1{
 }
 
 
-
-.dice.animate{
-    animation-name: roll;
+.dot{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
 }
+
+
+
+.face1 .dot:nth-child(1){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.face2 .dot:nth-child(1){
+    top: 25%;
+    left: 25%;
+}
+
+
+
+
+.face2 .dot:nth-child(2){
+    bottom: 25%;
+    right: 25%;
+}
+
+
+
+
+.face3 .dot:nth-child(1){
+    top: 25%;
+    left: 25%;
+}
+
+
+
+
+.face3 .dot:nth-child(2){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.face3 .dot:nth-child(3){
+    bottom: 25%;
+    right: 25%;
+}
+
+
+
+
+
+.face4 .dot:nth-child(1){
+    top: 25%;
+    left: 25%;
+}
+
+
+
+
+
+.face4 .dot:nth-child(2){
+    top: 25%;
+    right: 25%;
+}
+
+
+
+.face4 .dot:nth-child(3){
+    bottom: 25%;
+    left: 25%;
+}
+
+
+
+.face4 .dot:nth-child(4){
+    bottom: 25%;
+    right: 25%;
+}
+
+
+
+.face5 .dot:nth-child(1){
+    top: 25%;
+    left: 25%;
+}
+
+
+
+
+
+.face5 .dot:nth-child(2){
+    top: 25%;
+    right: 25%;
+}
+
+
+
+.face5 .dot:nth-child(3){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.face5 .dot:nth-child(4){
+    bottom: 25%;
+    left: 25%;
+}
+
+
+
+
+.face5 .dot:nth-child(5){
+    bottom: 25%;
+    right: 25%;
+}
+
+
+
+
+
+
+
+.face6 .dot:nth-child(1){
+    top: 25%;
+    left: 25%;
+}
+
+
+
+
+
+.face6 .dot:nth-child(2){
+    top: 25%;
+    right: 25%;
+}
+
+
+
+.face6 .dot:nth-child(3){
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.face6 .dot:nth-child(4){
+    top: 50%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.face6 .dot:nth-child(5){
+    bottom: 25%;
+    left: 25%;
+}
+
+
+
+
+.face6 .dot:nth-child(6){
+    bottom: 25%;
+    right: 25%;
+}
+
+
 
 
 .buttons{
@@ -90,6 +273,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 
 
@@ -117,6 +301,17 @@ button:hover{
 
 
 
+
+button:active{
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
 button:disabled{
     background-color: #7a7a7a;
     cursor: not-allowed;
@@ -135,6 +330,19 @@ button:disabled{
 #resetBtn:hover{
     background-color: #5a6278;
 }
+
+
+
+#holdBtn{
+    background-color: #4caf50;
+}
+
+
+
+#holdBtn:hover{
+    background-color: #3e8e41;
+}
+
 
 
 
@@ -184,8 +392,27 @@ button:disabled{
 
 
 
+.currentScore{
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 18px;
+}
 
-winning-message{
+
+
+
+.currentValue{
+    font-size: 24px;
+    color: #9effa9;
+    font-weight: bold;
+}
+
+
+
+
+.winning-message{
     font-size: 32px;
     color: gold;
     text-align: center;
@@ -202,6 +429,18 @@ winning-message{
     50%{transform: scale(1.1);};
     100%{transform: scale(1);};
 }
+
+
+
+.rules{
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Target the h3 of rules, in the js we did maximum, so try to create holdScore and switchPlayer function */
+
 
 
 
